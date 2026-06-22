@@ -1,0 +1,2017 @@
+<!DOCTYPE html>
+<!--
+  ╔══════════════════════════════════════════════════════════╗
+  ║         BE THAT DUDE — VSL Landing Page                  ║
+  ║  Cole Stockel × Novify | Dark Navy + Blue | June 2026   ║
+  ║                                                          ║
+  ║  VIDEO: Replace the placeholder block below with:        ║
+  ║  <iframe src="https://www.youtube.com/embed/VIDEO_ID     ║
+  ║    ?autoplay=0&rel=0&modestbranding=1"                   ║
+  ║    allow="autoplay; fullscreen" allowfullscreen           ║
+  ║    style="position:absolute;inset:0;width:100%;           ║
+  ║    height:100%;border:0;"></iframe>                       ║
+  ║                                                          ║
+  ║  WHOP LINK: Replace href="WHOP_CHECKOUT_URL" on all      ║
+  ║  CTA buttons once the product page is live.              ║
+  ╚══════════════════════════════════════════════════════════╝
+-->
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Be That Dude — 5-Week 1:1 Mentorship | Cole Stockel</title>
+  <meta name="description" content="Stop freezing. Stop performing. The 5-week 1:1 mentorship for men who know what they want but keep getting in their own way. 20 spots. $1,997." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800;900&family=Manrope:wght@200..800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet" />
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --black:      #08090E;
+      --navy-950:   #0C1220;
+      --navy-900:   #101B30;
+      --navy-800:   #162440;
+      --navy-700:   #1E3355;
+      /* Logo indigo-blue — sampled from logo stripe rgb(50,27,206) */
+      --blue-700:   #1A0E8A;
+      --blue-600:   #2714B4;
+      --blue-500:   #321ACE;
+      --blue-400:   #7B6AF5;
+      --blue-300:   #8B7AEC;
+      --blue-200:   #C4BAF5;
+      /* Logo crown gold — sampled from logo crown rgb(241,190,98) */
+      --gold:       #D4A843;
+      --gold-light: #F1BE62;
+      --white:      #FFFFFF;
+      --off-white:  #F1F5F9;
+      --text-light: #E2E8F0;
+      --text-mid:   #94A3B8;
+      --text-muted: #7F8FA6;
+      --green:      #10B981;
+      --red:        #EF4444;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Manrope', system-ui, sans-serif;
+      background: var(--black);
+      color: var(--white);
+      overflow-x: hidden;
+      font-kerning: normal;
+    }
+
+    /* ── Core Type Classes ── */
+    .disp {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 900;
+      text-transform: uppercase;
+      line-height: 0.92;
+      letter-spacing: -0.01em;
+      text-wrap: balance;
+    }
+
+    .mono {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.62rem;
+      font-weight: 600;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+    }
+
+    /* ── Utilities ── */
+    .blue       { color: var(--blue-400); }
+    .container  { max-width: 640px; margin: 0 auto; padding: 0 20px; }
+    .tag        { color: var(--blue-400); display: block; margin-bottom: 12px; }
+    .divider    { width: 36px; height: 2px; background: var(--gold); margin: 8px auto 0; }
+
+    /* ─────────────────────────────────────────────
+       LOGO BAR
+    ───────────────────────────────────────────── */
+    .logo-bar {
+      background: var(--navy-950);
+      border-bottom: 1px solid rgba(50,26,206,0.15);
+      padding: 16px 20px;
+      text-align: center;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .logo-mark {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .logo-img {
+      height: 48px;
+      width: auto;
+      display: block;
+    }
+
+    /* ─────────────────────────────────────────────
+       URGENCY BAND
+    ───────────────────────────────────────────── */
+    .urgency-band {
+      background: var(--blue-600);
+      padding: 14px 20px;
+      text-align: center;
+    }
+
+    .urgency-text {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 700;
+      font-size: 1rem;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      color: var(--white);
+      margin-bottom: 10px;
+    }
+
+    .timer-row { display: flex; justify-content: center; gap: 8px; }
+
+    .timer-block {
+      background: rgba(0,0,0,0.25);
+      border-radius: 6px;
+      width: 64px;
+      padding: 8px 0 6px;
+      text-align: center;
+    }
+
+    .timer-num {
+      display: block;
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 2rem;
+      font-weight: 800;
+      color: var(--white);
+      line-height: 1;
+    }
+
+    .timer-label {
+      display: block;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.45rem;
+      letter-spacing: 0.15em;
+      color: var(--blue-200);
+      text-transform: uppercase;
+      margin-top: 3px;
+    }
+
+    /* ─────────────────────────────────────────────
+       HERO
+    ───────────────────────────────────────────── */
+    .hero {
+      background: var(--navy-950);
+      padding: 64px 20px 52px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: -100px; left: 50%;
+      transform: translateX(-50%);
+      width: 700px; height: 500px;
+      background: radial-gradient(ellipse, rgba(39,20,180,0.14) 0%, transparent 65%);
+      pointer-events: none;
+    }
+
+    .hero-eyebrow { margin-bottom: 20px; }
+
+    .hero-headline {
+      font-size: clamp(3rem, 12vw, 5.6rem);
+      color: var(--white);
+      margin-bottom: 4px;
+    }
+
+    .hero-headline .blue-line {
+      color: var(--blue-400);
+      display: block;
+    }
+
+    .hero-sub {
+      font-size: clamp(1rem, 3.5vw, 1.15rem);
+      color: var(--text-mid);
+      line-height: 1.65;
+      max-width: 460px;
+      margin: 22px auto 0;
+      text-wrap: pretty;
+    }
+
+    .hero-sub strong { color: var(--text-light); font-weight: 600; }
+
+    /* ─────────────────────────────────────────────
+       VIDEO
+    ───────────────────────────────────────────── */
+    .video-section {
+      background: var(--black);
+      padding: 44px 20px 0;
+    }
+
+    .video-wrap {
+      max-width: 640px;
+      margin: 0 auto;
+      border-radius: 12px;
+      overflow: hidden;
+      position: relative;
+      aspect-ratio: 16 / 9;
+      background: var(--navy-900);
+      border: 1px solid rgba(50,26,206,0.2);
+      box-shadow: 0 0 60px rgba(39,20,180,0.12);
+    }
+
+    .video-placeholder-inner {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 16px;
+    }
+
+    .play-btn {
+      width: 76px; height: 76px;
+      border-radius: 50%;
+      background: var(--blue-600);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 0 48px rgba(39,20,180,0.55);
+      cursor: pointer;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .play-btn:hover {
+      transform: scale(1.08);
+      box-shadow: 0 0 72px rgba(39,20,180,0.75);
+    }
+
+    .play-btn svg { width: 30px; height: 30px; fill: white; margin-left: 4px; }
+
+    .video-cap {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.6rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+    }
+
+    /* ─────────────────────────────────────────────
+       CTA BUTTON (shared)
+    ───────────────────────────────────────────── */
+    .cta-btn {
+      display: inline-block;
+      background: var(--blue-600);
+      color: var(--white);
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 800;
+      font-size: 1.1rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 20px 44px;
+      border-radius: 6px;
+      border: none;
+      cursor: pointer;
+      text-decoration: none;
+      box-shadow: 0 4px 24px rgba(39,20,180,0.4);
+      transition: transform 0.18s ease, box-shadow 0.18s ease, background 0.18s ease;
+    }
+
+    .cta-btn:hover {
+      transform: translateY(-2px);
+      background: var(--blue-400);
+      box-shadow: 0 8px 40px rgba(39,20,180,0.6);
+    }
+
+    .cta-btn:focus-visible {
+      outline: 3px solid var(--gold-light);
+      outline-offset: 3px;
+    }
+
+    .cta-btn.pulse { animation: pulse-blue 2.5s ease infinite; }
+
+    @keyframes pulse-blue {
+      0%, 100% { box-shadow: 0 4px 24px rgba(39,20,180,0.4); }
+      50%       { box-shadow: 0 4px 44px rgba(39,20,180,0.75), 0 0 0 10px rgba(39,20,180,0.08); }
+    }
+
+    .cta-note {
+      margin-top: 12px;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.58rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+    }
+
+    /* ─────────────────────────────────────────────
+       POST-VIDEO
+    ───────────────────────────────────────────── */
+    .post-video {
+      background: var(--black);
+      padding: 40px 20px 44px;
+      text-align: center;
+    }
+
+    .post-video-sub {
+      font-size: clamp(1.05rem, 3.5vw, 1.25rem);
+      font-weight: 600;
+      color: var(--text-light);
+      margin-bottom: 26px;
+      line-height: 1.45;
+    }
+
+    /* ─────────────────────────────────────────────
+       STATS STRIP
+    ───────────────────────────────────────────── */
+    .stats-strip {
+      background: var(--navy-950);
+      border-top: 1px solid rgba(50,26,206,0.1);
+      border-bottom: 1px solid rgba(50,26,206,0.1);
+      padding: 28px 20px;
+    }
+
+    .stats-grid {
+      display: flex;
+      justify-content: center;
+      max-width: 560px;
+      margin: 0 auto;
+      flex-wrap: wrap;
+    }
+
+    .stat-item {
+      flex: 1;
+      min-width: 110px;
+      text-align: center;
+      padding: 0 14px;
+      border-right: 1px solid rgba(50,26,206,0.12);
+    }
+
+    .stat-item:last-child { border-right: none; }
+
+    .stat-num {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 900;
+      font-size: clamp(1.7rem, 6vw, 2.4rem);
+      color: var(--gold-light);
+      line-height: 1;
+      display: block;
+    }
+
+    .stat-label {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.52rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      margin-top: 4px;
+      display: block;
+    }
+
+    /* ─────────────────────────────────────────────
+       PAIN SECTION
+    ───────────────────────────────────────────── */
+    .pain-section {
+      background: var(--navy-950);
+      padding: 64px 20px;
+      text-align: center;
+    }
+
+    .pain-headline {
+      font-size: clamp(2rem, 8vw, 3.8rem);
+      color: var(--white);
+      margin-bottom: 36px;
+    }
+
+    .pain-quotes {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      max-width: 520px;
+      margin: 0 auto 36px;
+    }
+
+    .pain-quote {
+      background: var(--navy-800);
+      border: 1px solid rgba(50,26,206,0.12);
+      border-radius: 8px;
+      padding: 14px 18px 14px 42px;
+      text-align: left;
+      font-size: 1rem;
+      color: var(--text-light);
+      font-style: italic;
+      line-height: 1.5;
+      position: relative;
+    }
+
+    .pain-quote::before {
+      content: '\201C';
+      position: absolute;
+      left: 14px;
+      top: 7px;
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 2.2rem;
+      color: var(--blue-400);
+      line-height: 1;
+      opacity: 0.4;
+    }
+
+    .pain-bridge {
+      font-size: clamp(0.95rem, 3.5vw, 1.08rem);
+      color: var(--text-mid);
+      max-width: 480px;
+      margin: 0 auto;
+      line-height: 1.7;
+    }
+
+    .pain-bridge strong { color: var(--blue-300); font-weight: 600; }
+
+    /* ─────────────────────────────────────────────
+       SOLUTION MECHANISM
+    ───────────────────────────────────────────── */
+    .mechanism-section {
+      background: var(--black);
+      padding: 72px 20px;
+      text-align: center;
+    }
+
+    .mechanism-headline {
+      font-size: clamp(2rem, 8vw, 4rem);
+      color: var(--white);
+      margin-bottom: 8px;
+    }
+
+    .mechanism-sub {
+      font-size: clamp(1.1rem, 4vw, 1.5rem);
+      color: var(--blue-400);
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      margin-bottom: 36px;
+      display: block;
+    }
+
+    .mechanism-body {
+      font-size: clamp(0.95rem, 3.5vw, 1.08rem);
+      color: var(--text-mid);
+      max-width: 520px;
+      margin: 0 auto 40px;
+      line-height: 1.75;
+      text-wrap: pretty;
+    }
+
+    .mechanism-body strong { color: var(--text-light); font-weight: 600; }
+
+    .mechanism-pillars {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+      max-width: 560px;
+      margin: 0 auto;
+    }
+
+    .mechanism-pill {
+      background: var(--navy-900);
+      border: 1px solid rgba(50,26,206,0.18);
+      border-radius: 8px;
+      padding: 16px 12px;
+    }
+
+    .mechanism-pill-no {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.55rem;
+      letter-spacing: 0.15em;
+      color: var(--red);
+      text-transform: uppercase;
+      display: block;
+      margin-bottom: 6px;
+    }
+
+    .mechanism-pill-yes {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.55rem;
+      letter-spacing: 0.15em;
+      color: var(--green);
+      text-transform: uppercase;
+      display: block;
+      margin-bottom: 6px;
+    }
+
+    .mechanism-pill span:last-child {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 700;
+      font-size: 0.95rem;
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+      color: var(--text-light);
+      display: block;
+    }
+
+    @media (max-width: 480px) {
+      .mechanism-pillars { grid-template-columns: 1fr; }
+    }
+
+    /* ─────────────────────────────────────────────
+       DAMAGING ADMISSION
+    ───────────────────────────────────────────── */
+    .admission-section {
+      background: var(--navy-950);
+      padding: 72px 20px;
+      text-align: center;
+    }
+
+    .admission-headline {
+      font-size: clamp(2rem, 8vw, 3.8rem);
+      color: var(--white);
+      margin-bottom: 32px;
+    }
+
+    .admission-body {
+      font-size: clamp(0.95rem, 3.5vw, 1.08rem);
+      color: var(--text-mid);
+      max-width: 500px;
+      margin: 0 auto 20px;
+      line-height: 1.75;
+      text-wrap: pretty;
+    }
+
+    .admission-body strong { color: var(--text-light); font-weight: 600; }
+
+    .admission-turn {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 800;
+      font-size: clamp(1.3rem, 5vw, 1.9rem);
+      text-transform: uppercase;
+      letter-spacing: 0.02em;
+      color: var(--white);
+      max-width: 520px;
+      margin: 36px auto 0;
+      line-height: 1.2;
+      text-wrap: balance;
+    }
+
+    .admission-turn .blue { color: var(--blue-400); }
+
+    /* ─────────────────────────────────────────────
+       TESTIMONIALS
+    ───────────────────────────────────────────── */
+    .testimonials-section {
+      background: var(--black);
+      padding: 64px 20px;
+    }
+
+    .section-header { text-align: center; margin-bottom: 36px; }
+
+    .section-headline {
+      font-size: clamp(1.8rem, 7vw, 3.2rem);
+      color: var(--white);
+    }
+
+    .testimonial-cards {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      max-width: 560px;
+      margin: 0 auto;
+    }
+
+    .t-card {
+      background: var(--navy-900);
+      border: 1px solid rgba(50,26,206,0.14);
+      border-radius: 12px;
+      padding: 22px 20px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .t-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 3px;
+      background: linear-gradient(90deg, var(--blue-600), var(--blue-400));
+    }
+
+    .t-header {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 14px;
+    }
+
+    .t-avatar {
+      width: 38px; height: 38px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--blue-700), var(--blue-500));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 900;
+      font-size: 1.1rem;
+      color: white;
+      flex-shrink: 0;
+    }
+
+    .t-meta { flex: 1; }
+
+    .t-name {
+      font-family: 'Outfit', sans-serif;
+      font-weight: 600;
+      font-size: 0.88rem;
+      color: var(--text-light);
+      display: block;
+    }
+
+    .t-tag {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.52rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--blue-400);
+    }
+
+    .verified {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.5rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--green);
+    }
+
+    .verified svg { width: 12px; height: 12px; }
+
+    .t-quote {
+      font-size: 0.96rem;
+      color: var(--text-light);
+      line-height: 1.65;
+      font-style: italic;
+    }
+
+    .t-quote strong { font-style: normal; color: var(--white); font-weight: 600; }
+
+    /* ─────────────────────────────────────────────
+       SCREENSHOT TESTIMONIALS GRID
+    ───────────────────────────────────────────── */
+    .screenshots-section {
+      background: var(--navy-950);
+      padding: 64px 20px;
+    }
+
+    .screenshots-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    .screenshot-card {
+      background: var(--navy-900);
+      border-radius: 10px;
+      border-left: 3px solid var(--blue-500);
+      overflow: hidden;
+    }
+
+    .screenshot-card img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    @media (max-width: 900px) {
+      .screenshots-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+
+    @media (max-width: 560px) {
+      .screenshots-grid { grid-template-columns: 1fr; }
+    }
+
+    /* ─────────────────────────────────────────────
+       PROGRAM BREAKDOWN
+    ───────────────────────────────────────────── */
+    .program-section {
+      background: var(--navy-950);
+      padding: 64px 20px;
+    }
+
+    .weeks-list {
+      display: flex;
+      flex-direction: column;
+      max-width: 580px;
+      margin: 40px auto 0;
+      position: relative;
+    }
+
+    .weeks-list::before {
+      content: '';
+      position: absolute;
+      top: 20px; bottom: 20px;
+      left: 19px;
+      width: 2px;
+      background: linear-gradient(to bottom, var(--blue-600), var(--navy-700));
+    }
+
+    .week-item {
+      display: flex;
+      gap: 20px;
+      padding-bottom: 32px;
+    }
+
+    .week-item:last-child { padding-bottom: 0; }
+
+    .week-dot {
+      width: 40px; height: 40px;
+      border-radius: 50%;
+      background: var(--gold);
+      border: 3px solid var(--navy-950);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 900;
+      font-size: 1rem;
+      color: white;
+      flex-shrink: 0;
+      position: relative;
+      z-index: 1;
+    }
+
+    .week-content { flex: 1; padding-top: 8px; }
+
+    .week-title {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 800;
+      font-size: 1.3rem;
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+      color: var(--white);
+      margin-bottom: 6px;
+    }
+
+    .week-desc {
+      font-size: 0.91rem;
+      color: var(--text-mid);
+      line-height: 1.6;
+      text-wrap: pretty;
+      margin-bottom: 10px;
+    }
+
+    .chips { display: flex; flex-wrap: wrap; gap: 6px; }
+
+    .chip {
+      background: var(--navy-800);
+      border: 1px solid rgba(50,26,206,0.2);
+      border-radius: 4px;
+      padding: 4px 10px;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.52rem;
+      letter-spacing: 0.07em;
+      text-transform: uppercase;
+      color: var(--blue-300);
+    }
+
+    /* ─────────────────────────────────────────────
+       WHAT'S INCLUDED
+    ───────────────────────────────────────────── */
+    .included-section {
+      background: var(--black);
+      padding: 64px 20px;
+    }
+
+    .included-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      max-width: 560px;
+      margin: 32px auto 0;
+    }
+
+    .inc-item {
+      background: var(--navy-900);
+      border: 1px solid rgba(50,26,206,0.14);
+      border-radius: 10px;
+      padding: 20px;
+      display: flex;
+      gap: 16px;
+      align-items: flex-start;
+    }
+
+    .inc-icon {
+      width: 44px; height: 44px;
+      border-radius: 8px;
+      background: rgba(39,20,180,0.12);
+      border: 1px solid rgba(39,20,180,0.25);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      font-size: 1.2rem;
+    }
+
+    .inc-text { flex: 1; }
+
+    .inc-title {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 700;
+      font-size: 1.1rem;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      color: var(--white);
+      margin-bottom: 4px;
+    }
+
+    .inc-desc {
+      font-size: 0.88rem;
+      color: var(--text-mid);
+      line-height: 1.55;
+    }
+
+    .inc-value {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 700;
+      font-size: 0.9rem;
+      color: var(--blue-400);
+      margin-top: 6px;
+      display: block;
+    }
+
+    /* ─────────────────────────────────────────────
+       VALUE STACK
+    ───────────────────────────────────────────── */
+    .value-section {
+      background: var(--navy-950);
+      padding: 64px 20px;
+      text-align: center;
+    }
+
+    .value-table {
+      max-width: 520px;
+      margin: 32px auto 0;
+      border: 1px solid rgba(50,26,206,0.18);
+      border-radius: 12px;
+      overflow: hidden;
+    }
+
+    .v-row {
+      display: flex;
+      align-items: center;
+      padding: 14px 20px;
+      border-bottom: 1px solid rgba(50,26,206,0.08);
+      gap: 12px;
+    }
+
+    .v-row:last-child { border-bottom: none; }
+    .v-row:nth-child(even) { background: rgba(39,20,180,0.04); }
+
+    .v-item { flex: 1; text-align: left; font-size: 0.91rem; color: var(--text-light); }
+
+    .v-price {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 700;
+      font-size: 1.05rem;
+      color: var(--gold);
+      white-space: nowrap;
+    }
+
+    .v-total {
+      background: var(--navy-900);
+      border-top: 2px solid rgba(50,26,206,0.25);
+      padding: 18px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .v-total-label {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.62rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+    }
+
+    .v-total-num {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 900;
+      font-size: 1.4rem;
+      color: var(--text-muted);
+      text-decoration: line-through;
+    }
+
+    .v-invest {
+      background: rgba(212,168,67,0.12);
+      border-top: 2px solid rgba(212,168,67,0.35);
+      padding: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .v-invest-label {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 700;
+      font-size: 1rem;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--gold);
+    }
+
+    .v-invest-num {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 900;
+      font-size: 2rem;
+      color: var(--gold-light);
+    }
+
+    .anchor-text {
+      text-align: center;
+      font-size: 0.88rem;
+      color: var(--text-muted);
+      max-width: 480px;
+      margin: 18px auto 0;
+      line-height: 1.65;
+    }
+
+    /* ─────────────────────────────────────────────
+       PRICING CARD
+    ───────────────────────────────────────────── */
+    .pricing-section {
+      background: var(--black);
+      padding: 64px 20px;
+      text-align: center;
+    }
+
+    .pricing-card {
+      background: var(--navy-900);
+      border: 2px solid var(--blue-600);
+      border-radius: 16px;
+      max-width: 480px;
+      margin: 0 auto;
+      padding: 36px 28px;
+      position: relative;
+      overflow: hidden;
+      box-shadow: 0 0 72px rgba(39,20,180,0.15), 0 0 0 1px rgba(39,20,180,0.08);
+    }
+
+    .pricing-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 4px;
+      background: linear-gradient(90deg, var(--blue-600), var(--blue-400));
+    }
+
+    .pricing-label {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.6rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--blue-400);
+      margin-bottom: 8px;
+    }
+
+    .pricing-name {
+      font-size: clamp(2rem, 7vw, 2.8rem);
+      color: var(--white);
+      margin-bottom: 6px;
+    }
+
+    .spots-badge {
+      display: inline-block;
+      background: rgba(239,68,68,0.12);
+      border: 1px solid rgba(239,68,68,0.38);
+      color: #FCA5A5;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.58rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      padding: 5px 14px;
+      border-radius: 50px;
+      margin-bottom: 24px;
+    }
+
+    .price-display { margin-bottom: 28px; }
+
+    .price-crossed {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.6rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      text-decoration: line-through;
+      margin-bottom: 4px;
+    }
+
+    .price-main {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 900;
+      font-size: 4.2rem;
+      color: var(--gold-light);
+      line-height: 1;
+      display: block;
+    }
+
+    .price-main sup {
+      font-size: 1.8rem;
+      vertical-align: top;
+      margin-top: 10px;
+      color: var(--gold);
+    }
+
+    .price-sub {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.55rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      margin-top: 4px;
+    }
+
+    .pricing-features {
+      list-style: none;
+      text-align: left;
+      display: flex;
+      flex-direction: column;
+      gap: 11px;
+      margin-bottom: 28px;
+    }
+
+    .pricing-features li {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      font-size: 0.94rem;
+      color: var(--text-light);
+      line-height: 1.4;
+    }
+
+    .check-c {
+      width: 20px; height: 20px;
+      border-radius: 50%;
+      background: rgba(16,185,129,0.12);
+      border: 1px solid rgba(16,185,129,0.4);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      margin-top: 1px;
+    }
+
+    .check-c svg { width: 10px; height: 10px; stroke: var(--green); fill: none; stroke-width: 2.5; }
+
+    /* ─────────────────────────────────────────────
+       GUARANTEE
+    ───────────────────────────────────────────── */
+    .guarantee-section {
+      background: var(--navy-950);
+      padding: 64px 20px;
+      text-align: center;
+    }
+
+    .guarantee-box {
+      background: var(--navy-900);
+      border: 1px solid rgba(16,185,129,0.22);
+      border-radius: 16px;
+      max-width: 520px;
+      margin: 32px auto 0;
+      padding: 32px 24px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .guarantee-box::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 3px;
+      background: linear-gradient(90deg, var(--green), #34D399);
+    }
+
+    .guarantee-icon { font-size: 2.4rem; margin-bottom: 16px; display: block; }
+
+    .guarantee-name {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 900;
+      font-size: clamp(1.4rem, 5vw, 1.9rem);
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      color: var(--white);
+      margin-bottom: 8px;
+    }
+
+    .guarantee-sub {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.58rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--green);
+      margin-bottom: 16px;
+    }
+
+    .guarantee-text {
+      font-size: 0.95rem;
+      color: var(--text-mid);
+      line-height: 1.7;
+      text-wrap: pretty;
+    }
+
+    .guarantee-text strong { color: var(--text-light); }
+
+    /* ─────────────────────────────────────────────
+       NOT FOR YOU
+    ───────────────────────────────────────────── */
+    .not-section {
+      background: var(--black);
+      padding: 64px 20px;
+      text-align: center;
+    }
+
+    .not-box {
+      border: 1px solid rgba(239,68,68,0.18);
+      border-radius: 12px;
+      max-width: 520px;
+      margin: 24px auto 0;
+      padding: 24px 20px;
+      background: rgba(239,68,68,0.02);
+    }
+
+    .not-list { list-style: none; display: flex; flex-direction: column; gap: 13px; text-align: left; }
+
+    .not-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      font-size: 0.91rem;
+      color: var(--text-mid);
+      line-height: 1.55;
+    }
+
+    .x-c {
+      width: 20px; height: 20px;
+      border-radius: 50%;
+      background: rgba(239,68,68,0.1);
+      border: 1px solid rgba(239,68,68,0.32);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      margin-top: 1px;
+    }
+
+    .x-c svg { width: 10px; height: 10px; stroke: var(--red); fill: none; stroke-width: 2.5; }
+
+    /* ─────────────────────────────────────────────
+       FAQ
+    ───────────────────────────────────────────── */
+    .faq-section {
+      background: var(--navy-950);
+      padding: 64px 20px;
+    }
+
+    .faq-list {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      max-width: 560px;
+      margin: 32px auto 0;
+    }
+
+    .faq-item {
+      background: var(--navy-900);
+      border: 1px solid rgba(50,26,206,0.1);
+      border-radius: 10px;
+      overflow: hidden;
+    }
+
+    .faq-q {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 18px 20px;
+      cursor: pointer;
+      font-family: 'Manrope', sans-serif;
+      font-weight: 600;
+      font-size: 0.94rem;
+      color: var(--text-light);
+      gap: 12px;
+      border: none;
+      background: none;
+      width: 100%;
+      text-align: left;
+    }
+
+    .faq-q:focus-visible {
+      outline: 2px solid var(--blue-400);
+      outline-offset: -2px;
+    }
+
+    .faq-chevron {
+      width: 20px; height: 20px;
+      flex-shrink: 0;
+      transition: transform 0.2s ease;
+      color: var(--blue-400);
+    }
+
+    .faq-item.open .faq-chevron { transform: rotate(180deg); }
+
+    .faq-a {
+      display: grid;
+      grid-template-rows: 0fr;
+      transition: grid-template-rows 0.28s ease;
+    }
+
+    .faq-item.open .faq-a {
+      grid-template-rows: 1fr;
+    }
+
+    .faq-a > div {
+      overflow: hidden;
+      font-size: 0.91rem;
+      color: var(--text-mid);
+      line-height: 1.7;
+      padding: 0 20px 18px;
+      text-wrap: pretty;
+    }
+
+    /* ─────────────────────────────────────────────
+       FINAL CLOSE
+    ───────────────────────────────────────────── */
+    .close-section {
+      background: var(--navy-900);
+      padding: 72px 20px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .close-section::before {
+      content: '';
+      position: absolute;
+      top: -50%; left: 50%;
+      transform: translateX(-50%);
+      width: 700px; height: 500px;
+      background: radial-gradient(ellipse, rgba(39,20,180,0.1) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    .close-headline {
+      font-size: clamp(2.4rem, 10vw, 4.6rem);
+      color: var(--white);
+      margin-bottom: 16px;
+    }
+
+    .close-sub {
+      font-size: clamp(0.95rem, 3.2vw, 1.08rem);
+      color: var(--text-mid);
+      max-width: 440px;
+      margin: 0 auto 36px;
+      line-height: 1.65;
+    }
+
+    .options-list {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      max-width: 480px;
+      margin: 0 auto 36px;
+    }
+
+    .opt {
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+      background: var(--navy-950);
+      border: 1px solid rgba(50,26,206,0.1);
+      border-radius: 8px;
+      padding: 16px;
+      text-align: left;
+    }
+
+    .opt-num {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 800;
+      font-size: 1.3rem;
+      color: var(--text-muted);
+      flex-shrink: 0;
+      line-height: 1;
+      padding-top: 1px;
+    }
+
+    .opt-text {
+      font-size: 0.92rem;
+      color: var(--text-mid);
+      line-height: 1.55;
+    }
+
+    .opt.featured {
+      border-color: var(--blue-500);
+      background: rgba(39,20,180,0.07);
+    }
+
+    .opt.featured .opt-num { color: var(--blue-400); }
+
+    .opt.featured .opt-text { color: var(--text-light); }
+
+    .spots-warning {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.6rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: #FCA5A5;
+      margin-top: 16px;
+    }
+
+    /* ─────────────────────────────────────────────
+       FOOTER
+    ───────────────────────────────────────────── */
+    footer {
+      background: var(--navy-950);
+      padding: 22px 20px;
+      text-align: center;
+      border-top: 1px solid rgba(50,26,206,0.1);
+    }
+
+    footer p {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.54rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      line-height: 1.8;
+    }
+
+    /* ─────────────────────────────────────────────
+       MOBILE
+    ───────────────────────────────────────────── */
+    @media (max-width: 480px) {
+      .stat-item { min-width: 88px; padding: 0 8px; }
+      .weeks-list::before { left: 14px; }
+      .week-dot { width: 30px; height: 30px; font-size: 0.8rem; }
+      .week-item { gap: 14px; }
+      .pricing-card { padding: 28px 18px; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .cta-btn.pulse { animation: none; }
+      .faq-a { transition: none; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ═══════════════════════════════════════════
+       LOGO BAR
+  ═══════════════════════════════════════════ -->
+  <header class="logo-bar">
+    <div class="logo-mark">
+      <img src="./assets/logo.png" alt="Be That Dude" class="logo-img" />
+    </div>
+  </header>
+
+  <main>
+
+  <!-- ═══════════════════════════════════════════
+       URGENCY BAND #1
+  ═══════════════════════════════════════════ -->
+  <div class="urgency-band">
+    <p class="urgency-text">⚡ Cart Opens June 26 — Only 20 Spots Available</p>
+    <div class="timer-row">
+      <div class="timer-block"><span class="timer-num" id="days">00</span><span class="timer-label">Days</span></div>
+      <div class="timer-block"><span class="timer-num" id="hours">00</span><span class="timer-label">Hours</span></div>
+      <div class="timer-block"><span class="timer-num" id="minutes">00</span><span class="timer-label">Mins</span></div>
+      <div class="timer-block"><span class="timer-num" id="seconds">00</span><span class="timer-label">Secs</span></div>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════
+       HERO
+  ═══════════════════════════════════════════ -->
+  <section class="hero">
+    <span class="mono tag hero-eyebrow">5-Week 1:1 Mentorship · Cole Stockel · @chaotictarzan</span>
+    <h1 class="disp hero-headline">
+      You don't need<br/>a better line.
+      <span class="blue-line">You need to stop<br/>performing.</span>
+    </h1>
+    <p class="hero-sub">
+      The 5-week 1:1 mentorship for men who <strong>know what they want</strong><br/>
+      but keep getting in their own way.
+    </p>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       VIDEO
+  ═══════════════════════════════════════════ -->
+  <div class="video-section">
+    <div class="video-wrap">
+      <!--
+        ── TO EMBED VIDEO: Replace this comment block with ──
+        <iframe
+          src="https://www.youtube.com/embed/VIDEO_ID?autoplay=0&rel=0&modestbranding=1"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+          style="position:absolute;inset:0;width:100%;height:100%;border:0;">
+        </iframe>
+      -->
+      <div class="video-placeholder-inner">
+        <div class="play-btn">
+          <svg viewBox="0 0 24 24"><path d="M5 3l14 9-14 9V3z"/></svg>
+        </div>
+        <span class="video-cap">Watch This Before You Do Anything Else</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════
+       POST-VIDEO CTA #1
+  ═══════════════════════════════════════════ -->
+  <div class="post-video">
+    <p class="post-video-sub">
+      If that hit — everything you're looking for is right below.
+    </p>
+    <a href="WHOP_CHECKOUT_URL" target="_blank" class="cta-btn pulse">Claim Your Spot — $1,997</a>
+    <p class="cta-note">20 spots only · Cart closes June 30 · No payment plans</p>
+  </div>
+
+  <!-- ═══════════════════════════════════════════
+       STATS STRIP
+  ═══════════════════════════════════════════ -->
+  <div class="stats-strip">
+    <div class="stats-grid">
+      <div class="stat-item">
+        <span class="stat-num">25K+</span>
+        <span class="stat-label">Followers</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-num">896K</span>
+        <span class="stat-label">Monthly Views</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-num">1,500+</span>
+        <span class="stat-label">Avg Story Views</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-num">20</span>
+        <span class="stat-label">Spots Total</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════
+       PAIN SECTION
+  ═══════════════════════════════════════════ -->
+  <section class="pain-section">
+    <span class="mono tag">Sound Familiar?</span>
+    <h2 class="disp pain-headline">You've Said This<br/>To Yourself.</h2>
+    <div class="pain-quotes">
+      <p class="pain-quote">"She's out of my league."</p>
+      <p class="pain-quote">"I'll just be bothering her."</p>
+      <p class="pain-quote">"She must have a boyfriend."</p>
+      <p class="pain-quote">"I feel like I turn into a different dude the second she's hot."</p>
+      <p class="pain-quote">"I know what to say after the fact but in the moment I go blank."</p>
+      <p class="pain-quote">"I know what I want but I keep getting in my own way."</p>
+    </div>
+    <p class="pain-bridge">
+      That is not a tactics problem. Not a looks problem either. That is your brain running a program that says <strong>attraction has to be performed perfectly</strong> — and the second you try to perform, she feels it. The calculated anxious energy. And it repels her.<br/><br/>
+      <strong>The freeze is not you failing. It is the wrong program running.</strong>
+    </p>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       SOLUTION MECHANISM
+  ═══════════════════════════════════════════ -->
+  <section class="mechanism-section">
+    <div class="container">
+      <h2 class="disp mechanism-headline">The Fix Isn't<br/><span class="blue">A Better Line.</span></h2>
+      <span class="mechanism-sub">The mechanism is identity. Not tactics.</span>
+      <p class="mechanism-body">
+        Scripts don't stop the freeze. Openers don't stop the freeze. Working out doesn't stop the freeze.<br/><br/>
+        The freeze is an <strong>identity response</strong>. Your nervous system learned that approaching means risk — embarrassment, rejection, looking stupid. So it fires a threat signal before you can act.<br/><br/>
+        The only thing that stops the freeze is changing what your nervous system believes about <strong>who you are</strong> in that moment. That is what this program does.
+      </p>
+      <div class="mechanism-pillars">
+        <div class="mechanism-pill">
+          <span class="mechanism-pill-no">Not this</span>
+          <span>Scripts &amp; Openers</span>
+        </div>
+        <div class="mechanism-pill">
+          <span class="mechanism-pill-no">Not this</span>
+          <span>Routines &amp; Tactics</span>
+        </div>
+        <div class="mechanism-pill">
+          <span class="mechanism-pill-no">Not this</span>
+          <span>Fake Confidence</span>
+        </div>
+        <div class="mechanism-pill">
+          <span class="mechanism-pill-yes">This</span>
+          <span>Identity Rewire</span>
+        </div>
+        <div class="mechanism-pill">
+          <span class="mechanism-pill-yes">This</span>
+          <span>Nervous System Reset</span>
+        </div>
+        <div class="mechanism-pill">
+          <span class="mechanism-pill-yes">This</span>
+          <span>Real Presence</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       SCREENSHOT TESTIMONIALS
+  ═══════════════════════════════════════════ -->
+  <section class="screenshots-section">
+    <div class="section-header">
+      <span class="mono tag">Real Client Results</span>
+      <h2 class="disp section-headline">What Happens When<br/><span class="blue">You Stop Performing.</span></h2>
+      <div class="divider"></div>
+    </div>
+    <div class="screenshots-grid">
+      <div class="screenshot-card">
+        <img src="./assets/test-1.jpg" alt="DM screenshot: 'Bro I'm sooo fucking happy I could cry right now'" width="875" height="875" loading="lazy" />
+      </div>
+      <div class="screenshot-card">
+        <img src="./assets/test-2.jpg" alt="DM screenshot: client reporting breakthroughs in approaching, self-image, and dating" width="875" height="875" loading="lazy" />
+      </div>
+      <div class="screenshot-card">
+        <img src="./assets/test-3.jpg" alt="DM screenshot: 'Implemented everything... Got multiple numbers without even trying'" width="875" height="875" loading="lazy" />
+      </div>
+      <div class="screenshot-card">
+        <img src="./assets/test-4.jpg" alt="DM screenshot: 'I fucking did it' — gym approach success" width="875" height="875" loading="lazy" />
+      </div>
+      <div class="screenshot-card">
+        <img src="./assets/test-5.jpg" alt="DM screenshot: 'No homo dog you changed my life' — Venice Beach voice message" width="875" height="875" loading="lazy" />
+      </div>
+      <div class="screenshot-card">
+        <img src="./assets/test-6.jpg" alt="DM screenshot: 'I chopped it up with TWO chicks before even getting inside the gym'" width="875" height="875" loading="lazy" />
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       DAMAGING ADMISSION / TRANSITION
+  ═══════════════════════════════════════════ -->
+  <section class="admission-section">
+    <div class="container">
+      <h2 class="disp admission-headline">Every Script You Tried<br/><span class="blue">Made It Worse.</span></h2>
+      <p class="admission-body">
+        Every opener you memorized. Every YouTube breakdown of what to say. Every "just be confident" piece of advice.<br/><br/>
+        They all had the same problem — <strong>they gave you more to perform.</strong><br/><br/>
+        More to execute. More to forget. More to mess up under pressure. So the freeze got deeper, not lighter. Because the more material you had, the harder you tried. And the harder you tried, she felt it.<br/><br/>
+        Cole built this program because he watched that pattern destroy guys who were <strong>already trying as hard as they could.</strong> Guys who deserved better than another script.
+      </p>
+      <p class="admission-turn">
+        The answer isn't more tactics.<br/>
+        It's <span class="blue">removing the need to perform</span><br/>entirely.
+      </p>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       URGENCY BAND #2
+  ═══════════════════════════════════════════ -->
+  <div class="urgency-band">
+    <p class="urgency-text">⚡ 20 Spots. Cart Closes June 30.</p>
+    <div class="timer-row">
+      <div class="timer-block"><span class="timer-num" id="days2">00</span><span class="timer-label">Days</span></div>
+      <div class="timer-block"><span class="timer-num" id="hours2">00</span><span class="timer-label">Hours</span></div>
+      <div class="timer-block"><span class="timer-num" id="minutes2">00</span><span class="timer-label">Mins</span></div>
+      <div class="timer-block"><span class="timer-num" id="seconds2">00</span><span class="timer-label">Secs</span></div>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════
+       5-WEEK PROGRAM BREAKDOWN
+  ═══════════════════════════════════════════ -->
+  <section class="program-section">
+    <div class="container">
+      <div style="text-align:center;">
+        <span class="mono tag">The Program</span>
+        <h2 class="disp section-headline" style="font-size:clamp(1.9rem,7vw,3.2rem);">
+          5 Weeks.<br/><span class="blue">One Layer Removed</span><br/>Each Week.
+        </h2>
+        <p style="color:var(--text-mid);font-size:0.93rem;margin-top:14px;line-height:1.65;max-width:460px;margin-left:auto;margin-right:auto;">
+          No filler. No generic modules. Each week has one specific target — one pattern to strip out, one rep to run in the real world.
+        </p>
+      </div>
+
+      <div class="weeks-list">
+
+        <div class="week-item">
+          <div class="week-dot">1</div>
+          <div class="week-content">
+            <p class="week-title">Stop Freezing</p>
+            <p class="week-desc">Identify your triggers, your body's shutdown response, and the exact thought pattern that kills the moment before you move. The first win is catching it earlier — and staying present one second longer than before.</p>
+            <div class="chips">
+              <span class="chip">Freeze Trigger Log</span>
+              <span class="chip">Real-Time Reset Drill Sheet</span>
+              <span class="chip">Shutdown Pattern Tracker</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="week-item">
+          <div class="week-dot">2</div>
+          <div class="week-content">
+            <p class="week-title">Drop the Act</p>
+            <p class="week-desc">Strip out the scripted lines. Kill the approval-seeking behavior. Stop performing a version of yourself that is not real. She can feel the calculation — and that is exactly what kills it.</p>
+            <div class="chips">
+              <span class="chip">Fake vs Real Conversation Audit</span>
+              <span class="chip">Natural Opener Builder</span>
+              <span class="chip">Performance Drop-Down Checklist</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="week-item">
+          <div class="week-dot">3</div>
+          <div class="week-content">
+            <p class="week-title">Hold the Frame</p>
+            <p class="week-desc">Stay calm around attractive women without handing over your power. Build the grounded masculine presence that does not collapse under pressure. This is where the identity actually starts to shift.</p>
+            <div class="chips">
+              <span class="chip">Frame Check Worksheet</span>
+              <span class="chip">Power Leak Tracker</span>
+              <span class="chip">Stay Grounded Review Sheet</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="week-item">
+          <div class="week-dot">4</div>
+          <div class="week-content">
+            <p class="week-title">Start Easy Conversations</p>
+            <p class="week-desc">No slick openers. No calculated openers. Just human, low-pressure starts that actually go somewhere. You run real-world reps this week and debrief with Cole on exactly what happened.</p>
+            <div class="chips">
+              <span class="chip">Easy Openers Practice Sheet</span>
+              <span class="chip">Conversation Follow-Through Map</span>
+              <span class="chip">Overthinking Interrupt Log</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="week-item">
+          <div class="week-dot">5</div>
+          <div class="week-content">
+            <p class="week-title">Talk Naturally Around Attractive Women</p>
+            <p class="week-desc">Everything combines into one repeatable approach. You show up as yourself — calm, present, consistent. Not because you followed a script. Because this is just who you are now.</p>
+            <div class="chips">
+              <span class="chip">Real-World Conversation Rep Plan</span>
+              <span class="chip">Stay Yourself Reflection Sheet</span>
+              <span class="chip">Consistency Scorecard</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       WHAT'S INCLUDED
+  ═══════════════════════════════════════════ -->
+  <section class="included-section">
+    <div class="container">
+      <div style="text-align:center;">
+        <span class="mono tag">What You Get</span>
+        <h2 class="disp section-headline" style="font-size:clamp(1.9rem,7vw,3.2rem);">
+          Everything Included With<br/><span class="blue">Be That Dude.</span>
+        </h2>
+      </div>
+
+      <div class="included-grid">
+
+        <div class="inc-item">
+          <div class="inc-icon">📞</div>
+          <div class="inc-text">
+            <p class="inc-title">5 Weekly 1:1 Calls With Cole</p>
+            <p class="inc-desc">One core consultation call per week. Cole reviews what actually happened in your real-world reps, adjusts your approach, and gives you the specific work for the following week. Not generic advice. Your situation.</p>
+            <span class="inc-value">Value: $2,500</span>
+          </div>
+        </div>
+
+        <div class="inc-item">
+          <div class="inc-icon">📋</div>
+          <div class="inc-text">
+            <p class="inc-title">15 Purpose-Built Cheatsheets</p>
+            <p class="inc-desc">Three per week. Each one built for that week's specific friction point — not generic worksheets you fill in once and ignore. These are operational tools you use before, during, and after each real-world rep.</p>
+            <span class="inc-value">Value: $588</span>
+          </div>
+        </div>
+
+        <div class="inc-item">
+          <div class="inc-icon">💬</div>
+          <div class="inc-text">
+            <p class="inc-title">The Him Hotline</p>
+            <p class="inc-desc">Direct message access to Cole between calls. When something happens in real life and you do not know how to handle it, you message Cole directly. You do not sit with it until next week's call while the moment passes.</p>
+            <span class="inc-value">Value: $1,500</span>
+          </div>
+        </div>
+
+        <div class="inc-item">
+          <div class="inc-icon">🧠</div>
+          <div class="inc-text">
+            <p class="inc-title">Real-World Rep Reviews Every Week</p>
+            <p class="inc-desc">Every week you are running actual reps — real conversations, real interactions. Cole debriefs exactly what happened and why, then adjusts what you are working on. Not theory. Not practice scenarios. Real life.</p>
+            <span class="inc-value">Value: $1,200</span>
+          </div>
+        </div>
+
+        <div class="inc-item">
+          <div class="inc-icon">🛡️</div>
+          <div class="inc-text">
+            <p class="inc-title">The Become The Hunted 90-Day Guarantee</p>
+            <p class="inc-desc">Complete the full program and do not see a measurable shift? Cole keeps working with you for free until you do. No time limit. No fine print. His personal guarantee.</p>
+            <span class="inc-value">Value: $1,000</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       VALUE STACK + PRICING
+  ═══════════════════════════════════════════ -->
+  <section class="value-section">
+    <div class="container">
+      <span class="mono tag" style="text-align:center;display:block;">Investment</span>
+      <h2 class="disp section-headline" style="text-align:center;font-size:clamp(1.9rem,7vw,3.2rem);">
+        What It's Worth<br/><span class="blue">vs What It Costs.</span>
+      </h2>
+
+      <div class="value-table">
+        <div class="v-row"><span class="v-item">5 Weekly 1:1 Calls With Cole</span><span class="v-price">$2,500</span></div>
+        <div class="v-row"><span class="v-item">15 Purpose-Built Cheatsheets</span><span class="v-price">$588</span></div>
+        <div class="v-row"><span class="v-item">The Him Hotline (Direct DM Access)</span><span class="v-price">$1,500</span></div>
+        <div class="v-row"><span class="v-item">Real-World Rep Reviews Every Week</span><span class="v-price">$1,200</span></div>
+        <div class="v-row"><span class="v-item">The Become The Hunted 90-Day Guarantee</span><span class="v-price">$1,000</span></div>
+        <div class="v-total">
+          <span class="v-total-label">Total Value</span>
+          <span class="v-total-num">$6,788</span>
+        </div>
+        <div class="v-invest">
+          <span class="v-invest-label">Your Investment</span>
+          <span class="v-invest-num">$1,997</span>
+        </div>
+      </div>
+
+      <p class="anchor-text">
+        A therapist charges $150–$250 per session. Five weeks of therapy is $750–$1,250 minimum and they help you talk about anxiety, not fix it in real interactions. Generic group coaching runs $2,000–$4,000 for one of 50 guys on a Zoom call. This is five weeks of real 1:1 work, fixing it at the root.
+      </p>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       PRICING CARD
+  ═══════════════════════════════════════════ -->
+  <section class="pricing-section" id="pricing">
+    <div class="pricing-card">
+      <p class="pricing-label">5-Week 1:1 Mentorship With Cole Stockel</p>
+      <h2 class="disp pricing-name">Be That Dude</h2>
+      <span class="spots-badge">⚠ Only 20 Spots — Hard Cap</span>
+
+      <div class="price-display">
+        <p class="price-crossed">Total value $6,788</p>
+        <span class="price-main"><sup>$</sup>1,997</span>
+        <p class="price-sub">One payment · No recurring · No payment plans</p>
+      </div>
+
+      <ul class="pricing-features">
+        <li>
+          <span class="check-c"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg></span>
+          5 weekly 1:1 consultation calls with Cole personally
+        </li>
+        <li>
+          <span class="check-c"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg></span>
+          15 purpose-built cheatsheets (3 per week)
+        </li>
+        <li>
+          <span class="check-c"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg></span>
+          The Him Hotline — direct DM access to Cole between calls
+        </li>
+        <li>
+          <span class="check-c"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg></span>
+          Weekly real-world rep review and approach adjustment
+        </li>
+        <li>
+          <span class="check-c"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg></span>
+          The Become The Hunted 90-Day Guarantee
+        </li>
+        <li>
+          <span class="check-c"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg></span>
+          Delivered on Whop · Card, Apple Pay, PayPal, Crypto accepted
+        </li>
+      </ul>
+
+      <a href="WHOP_CHECKOUT_URL" target="_blank" class="cta-btn pulse" style="display:block;text-align:center;font-size:1.15rem;">
+        Claim Your Spot — $1,997
+      </a>
+      <p class="cta-note" style="margin-top:14px;">20 spots total · Cart closes June 30 · When they're gone, they're gone</p>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       GUARANTEE
+  ═══════════════════════════════════════════ -->
+  <section class="guarantee-section">
+    <div class="container">
+      <span class="mono tag" style="text-align:center;display:block;">Zero Risk</span>
+      <h2 class="disp section-headline" style="text-align:center;font-size:clamp(1.9rem,7vw,3.2rem);">The Guarantee.</h2>
+
+      <div class="guarantee-box">
+        <span class="guarantee-icon">🛡️</span>
+        <p class="guarantee-name">The Become The Hunted<br/>90-Day Promise</p>
+        <p class="guarantee-sub">Cole's personal guarantee — not fine print</p>
+        <p class="guarantee-text">
+          Complete the full 5-week program. Do the work. Run the reps. If you do all of that and do not see a <strong>measurable shift in how you show up</strong> around women you actually want — Cole keeps working with you for free until you do.<br/><br/>
+          No time limit. No form to fill out. This is a personal commitment from Cole himself.<br/><br/>
+          <strong>He does not offer this because it rarely gets triggered. He offers it because the work actually works.</strong>
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       NOT FOR YOU
+  ═══════════════════════════════════════════ -->
+  <section class="not-section">
+    <div class="container">
+      <h2 class="disp section-headline" style="text-align:center;font-size:clamp(1.7rem,6vw,2.8rem);">This Is Not For You If;</h2>
+      <div class="not-box">
+        <ul class="not-list">
+          <li>
+            <span class="x-c"><svg viewBox="0 0 12 12"><line x1="2" y1="2" x2="10" y2="10"/><line x1="10" y1="2" x2="2" y2="10"/></svg></span>
+            You are looking for pickup lines, scripts, or a persona to wear. That is the exact opposite of what this does.
+          </li>
+          <li>
+            <span class="x-c"><svg viewBox="0 0 12 12"><line x1="2" y1="2" x2="10" y2="10"/><line x1="10" y1="2" x2="2" y2="10"/></svg></span>
+            You want a quick hack or shortcut that skips the real-world reps. There are none in here.
+          </li>
+          <li>
+            <span class="x-c"><svg viewBox="0 0 12 12"><line x1="2" y1="2" x2="10" y2="10"/><line x1="10" y1="2" x2="2" y2="10"/></svg></span>
+            You are not willing to show up for five weeks and do the actual work between sessions.
+          </li>
+          <li>
+            <span class="x-c"><svg viewBox="0 0 12 12"><line x1="2" y1="2" x2="10" y2="10"/><line x1="10" y1="2" x2="2" y2="10"/></svg></span>
+            You want to be one of 50 guys on a group Zoom. This is one call per week — just you and Cole.
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       FAQ
+  ═══════════════════════════════════════════ -->
+  <section class="faq-section">
+    <div class="container">
+      <div style="text-align:center;">
+        <span class="mono tag">Questions</span>
+        <h2 class="disp section-headline" style="font-size:clamp(1.9rem,7vw,3.2rem);">Answered.</h2>
+      </div>
+
+      <div class="faq-list">
+
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false" onclick="toggleFaq(this)">
+            Is this pickup artist stuff?
+            <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6,9 12,15 18,9"/></svg>
+          </button>
+          <div class="faq-a"><div>Hard no. Pickup artist content teaches you to perform better — better lines, better routines, better openers. This does the opposite. It removes the performance completely. The entire program is built around becoming so grounded and present that attraction is something you are, not something you do.</div></div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false" onclick="toggleFaq(this)">
+            What if I'm just naturally awkward?
+            <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6,9 12,15 18,9"/></svg>
+          </button>
+          <div class="faq-a"><div>Awkwardness is a misdirected skill, not a personality trait. It means you care deeply about how interactions land — and you are redirecting that care into anxiety instead of presence. That is a rewire, not a personality transplant. People who do not care cannot be fixed. You can.</div></div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false" onclick="toggleFaq(this)">
+            What if it doesn't work for me?
+            <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6,9 12,15 18,9"/></svg>
+          </button>
+          <div class="faq-a"><div>That is exactly what the guarantee is for. Complete the program. Do the work. Run the reps. If you do not see a measurable shift, Cole keeps working with you for free until you do. No time limit.</div></div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false" onclick="toggleFaq(this)">
+            I can't afford it right now.
+            <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6,9 12,15 18,9"/></svg>
+          </button>
+          <div class="faq-a"><div>What is the cost of another year of the same freeze? Another year of the moment passing. Another year of dating apps going nowhere. Another year of watching other guys talk to the girls you want. The question is not whether you can afford this — it is whether you can afford not to.</div></div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false" onclick="toggleFaq(this)">
+            How does it work week to week?
+            <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6,9 12,15 18,9"/></svg>
+          </button>
+          <div class="faq-a"><div>One core 1:1 call with Cole each week. You get specific tasks and real-world reps to run. You run them. When something happens between calls, you message Cole directly on the Him Hotline. Next call, you debrief what actually happened and Cole adjusts the approach. Tight. Personal. Built around your actual life — not a hypothetical scenario.</div></div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       FINAL CLOSE
+  ═══════════════════════════════════════════ -->
+  <section class="close-section">
+    <span class="mono" style="color:var(--blue-400);display:block;margin-bottom:20px;">Make Your Choice</span>
+    <h2 class="disp close-headline">
+      Three Options.<br/><span class="blue">Pick One.</span>
+    </h2>
+    <p class="close-sub">
+      You have been here before. You already know which option you have been picking.
+    </p>
+
+    <div class="options-list">
+      <div class="opt">
+        <span class="opt-num">1</span>
+        <span class="opt-text">Do nothing. Close this page. Same freeze. Same pattern. Same moment passing you by every time she walks in.</span>
+      </div>
+      <div class="opt">
+        <span class="opt-num">2</span>
+        <span class="opt-text">Keep figuring it out alone. More YouTube. More Reddit. More free content. Same result.</span>
+      </div>
+      <div class="opt featured">
+        <span class="opt-num">3</span>
+        <span class="opt-text"><strong>Join Be That Dude.</strong> Five weeks. One call per week. Fix it at the root. The freeze stops being your default. Cole does not let you fail.</span>
+      </div>
+    </div>
+
+    <a href="WHOP_CHECKOUT_URL" target="_blank" class="cta-btn pulse" style="font-size:1.15rem;padding:22px 52px;">
+      Claim Your Spot — $1,997
+    </a>
+    <p class="spots-warning">⚠ 20 spots hard cap · Cart closes June 30 · When they're gone, they're gone</p>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       FOOTER
+  ═══════════════════════════════════════════ -->
+  </main>
+
+  <footer>
+    <p>© 2026 Be That Dude · Cole Stockel · All Rights Reserved</p>
+    <p>Results shown are real verbatim client messages. Individual results vary and are not guaranteed.</p>
+    <p style="margin-top:8px;">Questions? DM @chaotictarzan on Instagram.</p>
+  </footer>
+
+  <!-- ═══════════════════════════════════════════
+       SCRIPTS
+  ═══════════════════════════════════════════ -->
+  <script>
+    // Countdown to June 30, 2026 11:59 PM EST
+    const deadline = new Date('2026-06-30T23:59:00-05:00');
+
+    function updateCountdown() {
+      const diff = Math.max(0, deadline - Date.now());
+      const d = Math.floor(diff / (1000*60*60*24));
+      const h = Math.floor((diff % (1000*60*60*24)) / (1000*60*60));
+      const m = Math.floor((diff % (1000*60*60)) / (1000*60));
+      const s = Math.floor((diff % (1000*60)) / 1000);
+      const pad = n => String(n).padStart(2,'0');
+      const vals = [d,h,m,s];
+      ['days','hours','minutes','seconds'].forEach((id,i) => {
+        [document.getElementById(id), document.getElementById(id+'2')].forEach(el => {
+          if (el) el.textContent = pad(vals[i]);
+        });
+      });
+    }
+
+    updateCountdown();
+    setInterval(updateCountdown, 1000);
+
+    // FAQ accordion
+    function toggleFaq(btn) {
+      const item = btn.closest('.faq-item');
+      const isOpen = item.classList.contains('open');
+      document.querySelectorAll('.faq-item.open').forEach(el => {
+        el.classList.remove('open');
+        el.querySelector('.faq-q').setAttribute('aria-expanded', 'false');
+      });
+      if (!isOpen) {
+        item.classList.add('open');
+        btn.setAttribute('aria-expanded', 'true');
+      }
+    }
+  </script>
+
+</body>
+</html>
