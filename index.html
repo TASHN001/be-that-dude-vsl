@@ -680,7 +680,7 @@
     .screenshot-card {
       background: var(--navy-900);
       border-radius: 10px;
-      border-left: 3px solid var(--blue-500);
+      border: 1px solid rgba(50,26,206,0.15);
       overflow: hidden;
     }
 
@@ -1174,6 +1174,113 @@
     .x-c svg { width: 10px; height: 10px; stroke: var(--red); fill: none; stroke-width: 2.5; }
 
     /* ─────────────────────────────────────────────
+       CHECKOUT SPLIT
+    ───────────────────────────────────────────── */
+    .checkout-section {
+      background: var(--navy-950);
+      padding: 80px 20px;
+    }
+
+    .checkout-inner {
+      max-width: 1040px;
+      margin: 0 auto;
+    }
+
+    .checkout-heading {
+      font-size: clamp(1.9rem, 6vw, 3.2rem);
+      color: var(--white);
+      text-align: center;
+      margin-bottom: 48px;
+    }
+
+    .checkout-cols {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 28px;
+      align-items: start;
+    }
+
+    /* LEFT — checklist card */
+    .checkout-card {
+      background: var(--navy-900);
+      border: 1px solid rgba(50,26,206,0.15);
+      border-radius: 16px;
+      padding: 32px 28px;
+    }
+
+    .checkout-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 22px;
+    }
+
+    .checkout-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+    }
+
+    .check-blue {
+      width: 22px; height: 22px;
+      border-radius: 50%;
+      background: rgba(39,20,180,0.18);
+      border: 1px solid rgba(123,106,245,0.45);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+
+    .check-blue svg {
+      width: 11px; height: 11px;
+      stroke: var(--blue-400);
+      fill: none;
+      stroke-width: 2.5;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    .checkout-item-text { line-height: 1.5; }
+
+    .checkout-item-title {
+      font-weight: 700;
+      font-size: 0.95rem;
+      color: var(--text-light);
+      display: block;
+      margin-bottom: 3px;
+    }
+
+    .checkout-item-desc {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      line-height: 1.55;
+    }
+
+    /* RIGHT — iframe embed */
+    .checkout-embed {
+      background: var(--navy-900);
+      border: 1px solid rgba(50,26,206,0.15);
+      border-radius: 16px;
+      overflow: hidden;
+      position: sticky;
+      top: 20px;
+    }
+
+    .checkout-embed iframe {
+      display: block;
+      width: 100%;
+      min-height: 600px;
+      border: 0;
+    }
+
+    @media (max-width: 760px) {
+      .checkout-cols { grid-template-columns: 1fr; }
+      .checkout-embed { position: static; }
+    }
+
+    /* ─────────────────────────────────────────────
        FAQ
     ───────────────────────────────────────────── */
     .faq-section {
@@ -1377,7 +1484,7 @@
   ═══════════════════════════════════════════ -->
   <header class="logo-bar">
     <div class="logo-mark">
-      <img src="./assets/logo.png" alt="Be That Dude" class="logo-img" />
+      <img src="../Creator Partnerships/Cole Stockel Be That Dude/Assets - Logo,etc/Be that dude Logo new.png" alt="Be That Dude" class="logo-img" />
     </div>
   </header>
 
@@ -1541,22 +1648,22 @@
     </div>
     <div class="screenshots-grid">
       <div class="screenshot-card">
-        <img src="./assets/test-1.jpg" alt="DM screenshot: 'Bro I'm sooo fucking happy I could cry right now'" width="875" height="875" loading="lazy" />
+        <img src="../Creator Partnerships/Cole Stockel Be That Dude/Testominials pre launch/test 1.jpg" alt="DM screenshot: 'Bro I'm sooo fucking happy I could cry right now'" width="875" height="875" loading="lazy" />
       </div>
       <div class="screenshot-card">
-        <img src="./assets/test-2.jpg" alt="DM screenshot: client reporting breakthroughs in approaching, self-image, and dating" width="875" height="875" loading="lazy" />
+        <img src="../Creator Partnerships/Cole Stockel Be That Dude/Testominials pre launch/test 2.jpg" alt="DM screenshot: client reporting breakthroughs in approaching, self-image, and dating" width="875" height="875" loading="lazy" />
       </div>
       <div class="screenshot-card">
-        <img src="./assets/test-3.jpg" alt="DM screenshot: 'Implemented everything... Got multiple numbers without even trying'" width="875" height="875" loading="lazy" />
+        <img src="../Creator Partnerships/Cole Stockel Be That Dude/Testominials pre launch/test 3.jpg" alt="DM screenshot: 'Implemented everything... Got multiple numbers without even trying'" width="875" height="875" loading="lazy" />
       </div>
       <div class="screenshot-card">
-        <img src="./assets/test-4.jpg" alt="DM screenshot: 'I fucking did it' — gym approach success" width="875" height="875" loading="lazy" />
+        <img src="../Creator Partnerships/Cole Stockel Be That Dude/Testominials pre launch/test 4.jpg" alt="DM screenshot: 'I fucking did it' — gym approach success" width="875" height="875" loading="lazy" />
       </div>
       <div class="screenshot-card">
-        <img src="./assets/test-5.jpg" alt="DM screenshot: 'No homo dog you changed my life' — Venice Beach voice message" width="875" height="875" loading="lazy" />
+        <img src="../Creator Partnerships/Cole Stockel Be That Dude/Testominials pre launch/test 5.jpg" alt="DM screenshot: 'No homo dog you changed my life' — Venice Beach voice message" width="875" height="875" loading="lazy" />
       </div>
       <div class="screenshot-card">
-        <img src="./assets/test-6.jpg" alt="DM screenshot: 'I chopped it up with TWO chicks before even getting inside the gym'" width="875" height="875" loading="lazy" />
+        <img src="../Creator Partnerships/Cole Stockel Be That Dude/Testominials pre launch/test 6.jpg" alt="DM screenshot: 'I chopped it up with TWO chicks before even getting inside the gym'" width="875" height="875" loading="lazy" />
       </div>
     </div>
   </section>
@@ -1604,7 +1711,7 @@
           5 Weeks.<br/><span class="blue">One Layer Removed</span><br/>Each Week.
         </h2>
         <p style="color:var(--text-mid);font-size:0.93rem;margin-top:14px;line-height:1.65;max-width:460px;margin-left:auto;margin-right:auto;">
-          No filler. No generic modules. Each week has one specific target — one pattern to strip out, one rep to run in the real world.
+          There is no filler, no generic modules. Each week has one specific target: one pattern to strip out, one rep to run in the real world.
         </p>
       </div>
 
@@ -1614,7 +1721,7 @@
           <div class="week-dot">1</div>
           <div class="week-content">
             <p class="week-title">Stop Freezing</p>
-            <p class="week-desc">Identify your triggers, your body's shutdown response, and the exact thought pattern that kills the moment before you move. The first win is catching it earlier — and staying present one second longer than before.</p>
+            <p class="week-desc">Identify your triggers, your body's shutdown response, and the exact thought pattern that kills the moment before you move. The first win is catching it earlier and staying present one second longer than before.</p>
             <div class="chips">
               <span class="chip">Freeze Trigger Log</span>
               <span class="chip">Real-Time Reset Drill Sheet</span>
@@ -1627,7 +1734,7 @@
           <div class="week-dot">2</div>
           <div class="week-content">
             <p class="week-title">Drop the Act</p>
-            <p class="week-desc">Strip out the scripted lines. Kill the approval-seeking behavior. Stop performing a version of yourself that is not real. She can feel the calculation — and that is exactly what kills it.</p>
+            <p class="week-desc">Strip out the scripted lines. Kill the approval-seeking behavior. Stop performing a version of yourself that is not real. She can feel the calculation, and that is exactly what kills it.</p>
             <div class="chips">
               <span class="chip">Fake vs Real Conversation Audit</span>
               <span class="chip">Natural Opener Builder</span>
@@ -1666,7 +1773,7 @@
           <div class="week-dot">5</div>
           <div class="week-content">
             <p class="week-title">Talk Naturally Around Attractive Women</p>
-            <p class="week-desc">Everything combines into one repeatable approach. You show up as yourself — calm, present, consistent. Not because you followed a script. Because this is just who you are now.</p>
+            <p class="week-desc">Everything combines into one repeatable approach. You show up as yourself: calm, present, consistent. Not because you followed a script. Because this is just who you are now.</p>
             <div class="chips">
               <span class="chip">Real-World Conversation Rep Plan</span>
               <span class="chip">Stay Yourself Reflection Sheet</span>
@@ -1706,7 +1813,7 @@
           <div class="inc-icon">📋</div>
           <div class="inc-text">
             <p class="inc-title">15 Purpose-Built Cheatsheets</p>
-            <p class="inc-desc">Three per week. Each one built for that week's specific friction point — not generic worksheets you fill in once and ignore. These are operational tools you use before, during, and after each real-world rep.</p>
+            <p class="inc-desc">Three per week. Each one built for that week's specific friction point, not generic worksheets you fill in once and ignore. These are operational tools you use before, during, and after each real-world rep.</p>
             <span class="inc-value">Value: $588</span>
           </div>
         </div>
@@ -1866,9 +1973,72 @@
           </li>
           <li>
             <span class="x-c"><svg viewBox="0 0 12 12"><line x1="2" y1="2" x2="10" y2="10"/><line x1="10" y1="2" x2="2" y2="10"/></svg></span>
-            You want to be one of 50 guys on a group Zoom. This is one call per week — just you and Cole.
+            You want to be one of 50 guys on a group Zoom. This is one call per week, just you and Cole.
           </li>
         </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       CHECKOUT SPLIT
+  ═══════════════════════════════════════════ -->
+  <section class="checkout-section">
+    <div class="checkout-inner">
+      <h2 class="disp checkout-heading">Everything Included With<br/><span class="blue">Be That Dude.</span></h2>
+      <div class="checkout-cols">
+
+        <!-- LEFT: checklist -->
+        <div class="checkout-card">
+          <ul class="checkout-list">
+            <li>
+              <span class="check-blue"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg></span>
+              <div class="checkout-item-text">
+                <span class="checkout-item-title">5 Week 1:1 Mentorship with Cole</span>
+                <span class="checkout-item-desc">One dedicated mentorship call per week built around your specific situation.</span>
+              </div>
+            </li>
+            <li>
+              <span class="check-blue"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg></span>
+              <div class="checkout-item-text">
+                <span class="checkout-item-title">The Him Hotline</span>
+                <span class="checkout-item-desc">Direct message access to Cole between calls for real time guidance.</span>
+              </div>
+            </li>
+            <li>
+              <span class="check-blue"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg></span>
+              <div class="checkout-item-text">
+                <span class="checkout-item-title">Weekly Action Plan</span>
+                <span class="checkout-item-desc">Clear tasks and real world reps after every session so progress actually sticks.</span>
+              </div>
+            </li>
+            <li>
+              <span class="check-blue"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg></span>
+              <div class="checkout-item-text">
+                <span class="checkout-item-title">15 Purpose Built Cheatsheets</span>
+                <span class="checkout-item-desc">Tools designed for real time use between sessions.</span>
+              </div>
+            </li>
+            <li>
+              <span class="check-blue"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg></span>
+              <div class="checkout-item-text">
+                <span class="checkout-item-title">The Become The Hunted Guarantee</span>
+                <span class="checkout-item-desc">Complete the program, do the work. If no shift, Cole keeps working with you for free.</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <!-- RIGHT: Whop checkout embed -->
+        <div class="checkout-embed">
+          <iframe
+            src="https://whop.com/chaotictarzan/be-that-dude/"
+            title="Be That Dude — Secure Checkout"
+            loading="lazy"
+            allow="payment"
+          ></iframe>
+        </div>
+
       </div>
     </div>
   </section>
@@ -1890,7 +2060,7 @@
             Is this pickup artist stuff?
             <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6,9 12,15 18,9"/></svg>
           </button>
-          <div class="faq-a"><div>Hard no. Pickup artist content teaches you to perform better — better lines, better routines, better openers. This does the opposite. It removes the performance completely. The entire program is built around becoming so grounded and present that attraction is something you are, not something you do.</div></div>
+          <div class="faq-a"><div>Hard no. Pickup artist content teaches you to perform better: better lines, better routines, better openers. This does the opposite. It removes the performance completely. The entire program is built around becoming so grounded and present that attraction is something you are, not something you do.</div></div>
         </div>
 
         <div class="faq-item">
@@ -1922,7 +2092,7 @@
             How does it work week to week?
             <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6,9 12,15 18,9"/></svg>
           </button>
-          <div class="faq-a"><div>One core 1:1 call with Cole each week. You get specific tasks and real-world reps to run. You run them. When something happens between calls, you message Cole directly on the Him Hotline. Next call, you debrief what actually happened and Cole adjusts the approach. Tight. Personal. Built around your actual life — not a hypothetical scenario.</div></div>
+          <div class="faq-a"><div>One core 1:1 call with Cole each week. You get specific tasks and real-world reps to run. You run them. When something happens between calls, you message Cole directly on the Him Hotline. Next call, you debrief what actually happened and Cole adjusts the approach. Tight. Personal. Built around your actual life, not a hypothetical scenario.</div></div>
         </div>
 
       </div>
