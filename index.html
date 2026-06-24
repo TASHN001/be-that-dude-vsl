@@ -946,6 +946,185 @@
     }
 
     /* ─────────────────────────────────────────────
+       PLAN CHOOSER
+    ───────────────────────────────────────────── */
+    .plans-section {
+      background: var(--black);
+      padding: 72px 20px 0;
+      text-align: center;
+    }
+
+    .plans-heading {
+      font-size: clamp(1.6rem, 5vw, 2.4rem);
+      color: var(--white);
+      margin-bottom: 32px;
+    }
+
+    .plans-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+      max-width: 760px;
+      margin: 0 auto;
+    }
+
+    .plan-card {
+      background: var(--navy-900);
+      border: 1px solid rgba(50,26,206,0.18);
+      border-radius: 14px;
+      padding: 28px 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+      text-align: left;
+    }
+
+    .plan-card.vip {
+      border-color: rgba(212,168,67,0.45);
+      box-shadow: 0 0 28px rgba(212,168,67,0.07);
+    }
+
+    .plan-label-row {
+      display: flex;
+      align-items: center;
+      gap: 9px;
+    }
+
+    .plan-label {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.6rem;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+    }
+
+    .plan-card.vip .plan-label { color: var(--gold-light); }
+
+    .plan-badge {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.5rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--gold);
+      background: rgba(212,168,67,0.12);
+      border: 1px solid rgba(212,168,67,0.28);
+      border-radius: 4px;
+      padding: 3px 7px;
+    }
+
+    .plan-price {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 900;
+      font-size: clamp(2.4rem, 7vw, 3.2rem);
+      line-height: 1;
+      color: var(--white);
+      letter-spacing: -0.01em;
+    }
+
+    .plan-card.vip .plan-price { color: var(--gold-light); }
+
+    .plan-price sup {
+      font-size: 0.45em;
+      vertical-align: super;
+      color: var(--text-mid);
+    }
+
+    .plan-card.vip .plan-price sup { color: var(--gold); }
+
+    .plan-bullets {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 9px;
+      flex: 1;
+    }
+
+    .plan-bullets li {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 0.88rem;
+      color: var(--text-mid);
+      line-height: 1.4;
+    }
+
+    .plan-check {
+      width: 18px; height: 18px;
+      border-radius: 50%;
+      background: rgba(39,20,180,0.18);
+      border: 1px solid rgba(123,106,245,0.4);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .plan-card.vip .plan-check {
+      background: rgba(212,168,67,0.12);
+      border-color: rgba(212,168,67,0.35);
+    }
+
+    .plan-check svg {
+      width: 9px; height: 9px;
+      stroke: var(--blue-400);
+      fill: none;
+      stroke-width: 2.5;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    .plan-card.vip .plan-check svg { stroke: var(--gold); }
+
+    .plan-btn {
+      display: block;
+      width: 100%;
+      background: var(--blue-500);
+      color: var(--white);
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 800;
+      font-size: 1.1rem;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      padding: 15px 20px;
+      border-radius: 8px;
+      text-align: center;
+      text-decoration: none;
+      transition: background 0.18s ease, transform 0.12s ease;
+    }
+
+    .plan-btn:hover { background: var(--blue-600); transform: translateY(-1px); }
+    .plan-btn:active { transform: translateY(0); }
+    .plan-btn:focus-visible { outline: 3px solid var(--gold-light); outline-offset: 3px; }
+
+    .plan-card.vip .plan-btn {
+      background: var(--gold);
+      color: var(--black);
+    }
+
+    .plan-card.vip .plan-btn:hover { background: var(--gold-light); }
+
+    .plans-footnote {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.6rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      text-align: center;
+      margin-top: 18px;
+      max-width: 760px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    @media (max-width: 600px) {
+      .plans-grid { grid-template-columns: 1fr; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .plan-btn { transition: none; }
+    }
+
+    /* ─────────────────────────────────────────────
        PRICING CARD
     ───────────────────────────────────────────── */
     .pricing-section {
@@ -2015,6 +2194,64 @@
         A therapist charges $150–$250 per session. Five weeks of therapy is $750–$1,250 minimum and they help you talk about anxiety, not fix it in real interactions. Generic group coaching runs $2,000–$4,000 for one of 50 guys on a Zoom call. This is five weeks of real 1:1 work, fixing it at the root.
       </p>
     </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       PLAN CHOOSER
+  ═══════════════════════════════════════════ -->
+  <section class="plans-section">
+    <h2 class="disp plans-heading">Choose Your Plan</h2>
+    <div class="plans-grid">
+
+      <!-- Standard -->
+      <div class="plan-card">
+        <div class="plan-label-row">
+          <span class="plan-label">Standard</span>
+        </div>
+        <p class="plan-price"><sup>$</sup>1,997</p>
+        <ul class="plan-bullets">
+          <li>
+            <span class="plan-check"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg></span>
+            1 call per week
+          </li>
+          <li>
+            <span class="plan-check"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg></span>
+            5 weeks
+          </li>
+          <li>
+            <span class="plan-check"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg></span>
+            20 spots available
+          </li>
+        </ul>
+        <a href="https://whop.com/chaotictarzan/be-that-dude/" target="_blank" class="plan-btn">Claim Your Spot</a>
+      </div>
+
+      <!-- VIP -->
+      <div class="plan-card vip">
+        <div class="plan-label-row">
+          <span class="plan-label">VIP</span>
+          <span class="plan-badge">Most Intensive</span>
+        </div>
+        <p class="plan-price"><sup>$</sup>2,497</p>
+        <ul class="plan-bullets">
+          <li>
+            <span class="plan-check"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg></span>
+            2 calls per week
+          </li>
+          <li>
+            <span class="plan-check"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg></span>
+            5 weeks
+          </li>
+          <li>
+            <span class="plan-check"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg></span>
+            Only 5 spots available
+          </li>
+        </ul>
+        <a href="https://whop.com/chaotictarzan/be-that-dude/" target="_blank" class="plan-btn">Claim VIP Spot</a>
+      </div>
+
+    </div>
+    <p class="plans-footnote">Both plans include everything listed above. VIP spots fill first.</p>
   </section>
 
   <!-- ═══════════════════════════════════════════
