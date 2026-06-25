@@ -1819,7 +1819,7 @@
   <!-- ═══════════════════════════════════════════
        URGENCY BAND #1
   ═══════════════════════════════════════════ -->
-  <div class="urgency-band" id="urgency-band-1" style="display:none">
+  <div class="urgency-band" id="urgency-band-1">
     <p class="urgency-text">⚡ Cart Opens June 26 — Only 20 Spots Available</p>
     <div class="timer-row">
       <div class="timer-block"><span class="timer-num" id="days">00</span><span class="timer-label">Days</span></div>
@@ -1985,7 +1985,7 @@
   <!-- ═══════════════════════════════════════════
        URGENCY BAND #2
   ═══════════════════════════════════════════ -->
-  <div class="urgency-band" id="urgency-band-2" style="display:none">
+  <div class="urgency-band" id="urgency-band-2">
     <p class="urgency-text">⚡ 20 Spots. Cart Closes June 30.</p>
     <div class="timer-row">
       <div class="timer-block"><span class="timer-num" id="days2">00</span><span class="timer-label">Days</span></div>
@@ -2610,16 +2610,7 @@
        SCRIPTS
   ═══════════════════════════════════════════ -->
   <script>
-    const deadline  = new Date('2026-06-30T00:00:00-05:00');
-    const startDate = new Date('2026-06-26T00:00:00-05:00');
-
-    function updateVisibility() {
-      const show = Date.now() >= startDate.getTime();
-      ['urgency-band-1', 'urgency-band-2'].forEach(id => {
-        const el = document.getElementById(id);
-        if (el) el.style.display = show ? '' : 'none';
-      });
-    }
+    const deadline = new Date('2026-06-30T00:00:00-07:00');
 
     function updateCountdown() {
       const diff = Math.max(0, deadline - Date.now());
@@ -2636,9 +2627,8 @@
       });
     }
 
-    updateVisibility();
     updateCountdown();
-    setInterval(() => { updateVisibility(); updateCountdown(); }, 1000);
+    setInterval(updateCountdown, 1000);
 
     // FAQ accordion
     function toggleFaq(btn) {
