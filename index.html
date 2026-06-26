@@ -312,6 +312,18 @@
 
     .stat-item:last-child { border-right: none; }
 
+    .stat-num-vip {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 900;
+      font-size: clamp(1.7rem, 6vw, 2.4rem);
+      color: #9B4DCA;
+      line-height: 1;
+      display: block;
+      text-shadow:
+        0 0 12px rgba(123,47,190,0.7),
+        0 0 28px rgba(123,47,190,0.35);
+    }
+
     .stat-num {
       font-family: 'Barlow Condensed', sans-serif;
       font-weight: 900;
@@ -1840,6 +1852,10 @@
       <div class="stat-item">
         <span class="stat-num">20</span>
         <span class="stat-label">Spots Total</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-num-vip">5</span>
+        <span class="stat-label">VIP Only</span>
       </div>
     </div>
   </div>
