@@ -324,6 +324,42 @@
         0 0 28px rgba(123,47,190,0.35);
     }
 
+    @keyframes spots-pulse {
+      0%, 100% { transform: scale(1);    text-shadow: 0 0 8px rgba(241,190,98,0.4); }
+      50%       { transform: scale(1.05); text-shadow: 0 0 18px rgba(241,190,98,0.85), 0 0 36px rgba(241,190,98,0.22); }
+    }
+    .spots-live {
+      display: inline-flex;
+      align-items: baseline;
+      gap: 0.22em;
+      white-space: nowrap;
+    }
+    .spots-old {
+      display: inline-block;
+      position: relative;
+      opacity: 0.38;
+      font-size: 0.78em;
+      color: rgba(255,255,255,0.5);
+    }
+    .spots-old::after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: -5%;
+      width: 110%;
+      height: 2px;
+      background: #ef4444;
+      border-radius: 1px;
+      transform: rotate(-22deg);
+      transform-origin: center center;
+    }
+    .spots-new {
+      display: inline-block;
+      color: var(--gold-light);
+      font-weight: inherit;
+      animation: spots-pulse 1.5s ease-in-out infinite;
+    }
+
     .stat-num {
       font-family: 'Barlow Condensed', sans-serif;
       font-weight: 900;
@@ -1788,7 +1824,7 @@
        URGENCY BAND #1
   ═══════════════════════════════════════════ -->
   <div class="urgency-band" id="urgency-band-1">
-    <p class="urgency-text">⚡ Cart Opens June 26 — Only 20 Spots Available</p>
+    <p class="urgency-text">⚡ Cart Opens June 26 — Only <span class="spots-live"><span class="spots-old">20</span><span class="spots-new">17</span></span> Spots Available</p>
     <div class="timer-row">
       <div class="timer-block"><span class="timer-num" id="days">00</span><span class="timer-label">Days</span></div>
       <div class="timer-block"><span class="timer-num" id="hours">00</span><span class="timer-label">Hours</span></div>
@@ -1829,7 +1865,7 @@
       If that hit, everything you're looking for is right below.
     </p>
     <a href="https://whop.com/chaotictarzan/be-that-dude/" target="_blank" class="cta-btn pulse">Claim Your Spot — $1,997</a>
-    <p class="cta-note">20 spots only · Cart closes June 30 · No payment plans</p>
+    <p class="cta-note"><span class="spots-live"><span class="spots-old">20</span><span class="spots-new">17</span></span> spots only · Cart closes June 30 · No payment plans</p>
   </div>
 
   <!-- ═══════════════════════════════════════════
@@ -1850,7 +1886,7 @@
         <span class="stat-label">Avg Story Views</span>
       </div>
       <div class="stat-item">
-        <span class="stat-num">20</span>
+        <span class="stat-num"><span class="spots-live"><span class="spots-old">20</span><span class="spots-new">17</span></span></span>
         <span class="stat-label">Spots Total</span>
       </div>
       <div class="stat-item">
@@ -1944,7 +1980,7 @@
        URGENCY BAND #2
   ═══════════════════════════════════════════ -->
   <div class="urgency-band" id="urgency-band-2">
-    <p class="urgency-text">⚡ 20 Spots. Cart Closes June 30.</p>
+    <p class="urgency-text">⚡ <span class="spots-live"><span class="spots-old">20</span><span class="spots-new">17</span></span> Spots. Cart Closes June 30.</p>
     <div class="timer-row">
       <div class="timer-block"><span class="timer-num" id="days2">00</span><span class="timer-label">Days</span></div>
       <div class="timer-block"><span class="timer-num" id="hours2">00</span><span class="timer-label">Hours</span></div>
@@ -2094,7 +2130,7 @@
           </li>
           <li>
             <span class="plan-check"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg></span>
-            20 spots available
+            <span class="spots-live"><span class="spots-old">20</span><span class="spots-new">17</span></span> spots available
           </li>
         </ul>
         <a href="https://whop.com/chaotictarzan/be-that-dude/" target="_blank" class="plan-btn">Claim Your Spot</a>
@@ -2369,7 +2405,7 @@
     <div class="pricing-card">
       <p class="pricing-label">5-Week 1:1 Mentorship With Cole Stockel</p>
       <h2 class="disp pricing-name">Be That Dude</h2>
-      <span class="spots-badge">⚠ Only 20 Spots — Hard Cap</span>
+      <span class="spots-badge">⚠ Only <span class="spots-live"><span class="spots-old">20</span><span class="spots-new">17</span></span> Spots — Hard Cap</span>
 
       <div class="price-display">
         <p class="price-crossed">Total value $6,788</p>
@@ -2411,7 +2447,7 @@
       <a href="https://whop.com/chaotictarzan/be-that-dude/" target="_blank" class="cta-btn pulse" style="display:block;text-align:center;font-size:1.15rem;">
         Claim Your Spot — $1,997
       </a>
-      <p class="cta-note" style="margin-top:14px;">20 spots total · Cart closes June 30 · When they're gone, they're gone</p>
+      <p class="cta-note" style="margin-top:14px;"><span class="spots-live"><span class="spots-old">20</span><span class="spots-new">17</span></span> spots total · Cart closes June 30 · When they're gone, they're gone</p>
     </div>
   </section>
 
@@ -2466,7 +2502,7 @@
 
         <!-- RIGHT: CTA card -->
         <div class="checkout-embed">
-          <span class="cta-card-badge">⚠ Only 20 Spots — Hard Cap</span>
+          <span class="cta-card-badge">⚠ Only <span class="spots-live"><span class="spots-old">20</span><span class="spots-new">17</span></span> Spots — Hard Cap</span>
 
           <div>
             <p class="cta-card-price-label">Total Value $6,788</p>
@@ -2550,7 +2586,7 @@
     <a href="https://whop.com/chaotictarzan/be-that-dude/" target="_blank" class="cta-btn pulse" style="font-size:1.15rem;padding:22px 52px;">
       Claim Your Spot — $1,997
     </a>
-    <p class="spots-warning">⚠ 20 spots hard cap · Cart closes June 30 · When they're gone, they're gone</p>
+    <p class="spots-warning">⚠ <span class="spots-live"><span class="spots-old">20</span><span class="spots-new">17</span></span> spots hard cap · Cart closes June 30 · When they're gone, they're gone</p>
   </section>
 
   <!-- ═══════════════════════════════════════════
